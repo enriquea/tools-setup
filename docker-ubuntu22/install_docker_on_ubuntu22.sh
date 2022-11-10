@@ -1,9 +1,9 @@
 #!/bin/sh
 
-#  install_docker.sh
+# install_docker_on_ubuntu22.sh
 #
-#  Created by eam on 09.11.22.
-#
+# author: eam
+# date: 10.11.22
 
 set -e
 set -u

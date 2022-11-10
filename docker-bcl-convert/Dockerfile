@@ -4,7 +4,7 @@
 # Dockerfile to create a docker contatiner with CentOS and the bcl-convert tool (Illumina).
 #
 # 1. First download the bcl-convert-4.0.3-2.el7.x86_64.rpm package from
-# https://support.illumina.com/downloads/bcl-convert-downloads.html.
+# https://emea.support.illumina.com/sequencing/sequencing_software/bcl-convert.html
 # The rpm file is expected to be in the same dir of the Dockerfile.
 #
 # 2. Build a docker image using this Dockerfile
