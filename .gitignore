@@ -178,4 +178,4 @@ cython_debug/
 #.idea/
 
 # User specific
-local/
+!/local/
