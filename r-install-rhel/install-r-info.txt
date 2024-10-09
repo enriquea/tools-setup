@@ -1,0 +1,22 @@
+# Installing R in RHEL 9
+# Source: https://docs.posit.co/resources/install-r/
+
+# 1. Enable the Extra Packages for Enterprise Linux (EPEL) repository:
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+
+# 2. Enable the CodeReady Linux Builder repository:
+sudo subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms
+
+# 3. Specify R version
+export R_VERSION=4.2.3
+
+# 4. Download and install R
+curl -O https://cdn.rstudio.com/r/rhel-9/pkgs/R-${R_VERSION}-1-1.x86_64.rpm
+sudo dnf install R-${R_VERSION}-1-1.x86_64.rpm
+
+# 5. Verify R installation
+/opt/R/${R_VERSION}/bin/R --version
+
+# 6. Create a symlink to R
+sudo ln -s /opt/R/${R_VERSION}/bin/R /usr/local/bin/R
+sudo ln -s /opt/R/${R_VERSION}/bin/Rscript /usr/local/bin/Rscript
